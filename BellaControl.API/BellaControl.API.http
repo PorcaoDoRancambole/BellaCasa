@@ -1,0 +1,6 @@
+@BellaControl.API_HostAddress = http://localhost:5136
+
+GET {{BellaControl.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
