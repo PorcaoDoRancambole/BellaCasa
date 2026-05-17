@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>{{ isEdit ? 'Editar Categoria' : 'Nova Categoria' }}</h2>
+
+  <form (ngSubmit)="submit()">
+    <div>
+      <label>Nome</label>
+      <input name="nome" [(ngModel)]="categoria.nome" required />
+    </div>
+    <div>
+      <label>Descrição</label>
+      <textarea name="descricao" [(ngModel)]="categoria.descricao"></textarea>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Salvar</button>
+      <button type="button" (click)="router.navigate(['/categorias'])">Cancelar</button>
+    </div>
+  </form>
+</div>

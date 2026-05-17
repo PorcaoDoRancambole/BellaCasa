@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Detalhes da Categoria</h2>
+
+  <div *ngIf="categoria">
+    <p><strong>ID:</strong> {{ categoria.id }}</p>
+    <p><strong>Nome:</strong> {{ categoria.nome }}</p>
+    <p><strong>Descrição:</strong> {{ categoria.descricao }}</p>
+    <div class="actions">
+      <button (click)="router.navigate(['/categorias'])">Voltar</button>
+      <button (click)="router.navigate(['/categorias/editar', categoria.id])">Editar</button>
+    </div>
+  </div>
+</div>
